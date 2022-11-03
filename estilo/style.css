@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*--cor1: #f9be4d;
+    --cor2: #F04692;*/
+    --cor1: #f5ff6c;
+    --cor2: #ff0665;
+    --cor3: #fac0da;
+    --cor4: #864764;
+    --font1: 'Montserrat', sans-serif;
+}
+
+html,body{
+    background: radial-gradient(circle at top right, #723f57,#491c30);
+    /*background-image: linear-gradient(90deg,#491c30,#723f57,#491c30);*/
+    min-height: 100%;
+    font-family: var(--font1);
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+header>a{
+   
+        
+        background: -webkit-linear-gradient(45deg,var(--cor2),var( --cor1));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+        font-size: 2em;
+        text-decoration: none;
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.24);
+        
+      
+}
+header nav{
+    display: flex;
+    gap: 32px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: var(--cor3);
+    transition: all 0.2s;
+}
+header nav a:hover{
+    text-decoration: underline;
+    color: white;
+    transition: all 0.2s;
+}
+
+main{
+    border-top: 1px solid var(--cor4);
+}
+.principal{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    padding: 40px 0px;
+    flex-direction: row;
+    min-height: 680px;
+    
+}
+.texto-dentro{
+    font-size: 1.2em;
+    color: var(--cor3);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.61);
+    text-align: center;
+    font-weight: 900;
+    animation: cimabaixo 10s infinite;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+    
+}
+
+@keyframes cimabaixo{
+    0%{
+        transform: translateY(0%) ;
+    }
+    50%{
+        transform: translateY(60%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+.imagem-e-texto{
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 40px;
+    justify-content: center;
+    width: 583px;
+    min-height: 474px;
+
+    background-image: url(../imagens/astronauta01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 2;
+}
+.principal-texto{
+    
+    color: var(--cor3);
+    display: flex;
+    height: 100%;
+    min-height: 350px;
+    align-items: flex-end;
+    justify-content: center;
+    
+    flex-direction: column;
+    
+    
+    
+}
+.principal-texto p{
+    text-align: right;
+}
+footer{
+    border-top: 1px solid var(--cor4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    padding: 20px 0px;
+    color: var(--cor3);
+}
+.direitos-reservados{
+    background: -webkit-linear-gradient(45deg,var(--cor2),var( --cor1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+.redes-sociais{
+    display: flex;
+}
+footer a{
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    
+}
+footer img{
+    width: 32px; 
+    transition: all 0.1s;
+    transition-timing-function: ease;
+    
+}
+footer img:hover{
+
+    width: 40px; 
+    transition: all 0.1s;
+    transition-timing-function: ease;
+    
+}
+
+
+
+@media  screen and (max-width: 900px) {
+    html,body{
+        min-height: 100%;
+        background-image: linear-gradient(#491c30,#723f57,#491c30);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .principal{
+        flex-direction: column;
+        transition: all 0.5s;
+
+    }
+    .imagem-e-texto{
+        margin-top: 60px;
+        max-width: 583px;
+        min-width: 300px;
+        width: 90vw;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+
+
+    header{
+        justify-content: center;
+        flex-direction: column;
+        transition: all 0.5s;
+        gap: 20px;
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        background-color: #4B1E32;
+        border-bottom: 1px solid var(--cor4);
+        z-index: 1;
+    }
+    
+}
+
+
+
